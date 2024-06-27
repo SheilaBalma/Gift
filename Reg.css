@@ -1,95 +1,142 @@
-body
-{
-    background-image:url(:images/fondo.JPG);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+body {
+  background-image: url('images/C6228709-BACB-4DF4-8954-F7736680FAF1.JPG');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
-.container {
-    position: relative;
-    width: 50%;
-  }
-  
-  .image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    border-radius: 8px;
-  }
-  
-  .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%)
-  }
-  
-  .container:hover .image {
-    opacity: 0.3;
-  }
-  
-  .container:hover .middle {
-    opacity: 1;
-  }
-  
-  .text {
-    background-color:brown;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-  }
 
-.Texto{
-    color:black;
-    text-align: center; /* Centrar el texto */
-    background-color: beige;
+.container {
+  position: relative;
+  width: 50%;
+  margin: 0 auto; /* Center the container */
+  max-width: 100%; /* Ensure it doesn't exceed the viewport width */
 }
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: brown;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  text-align: center;
+}
+
+.Texto {
+  color: black;
+  text-align: center; /* Center the text */
+  background-color: beige;
+  padding: 10px;
+  margin: 0;
+}
+
 .contain {
-    padding: 20px;
+  padding: 20px;
+  text-align: center; /* Center the contain div */
 }
 
 .content {
-    position: relative;
-    margin-top: 20px; /* Asegura que el contenido tenga espacio debajo del título */
+  position: relative;
+  margin-top: 20px; /* Ensure content has space below the title */
 }
 
 .top-right-text {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente opcional */
-    padding: 5px 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
-    max-width: 200px; /* Ajusta el ancho máximo según sea necesario */
-    word-wrap: break-word; /* Permite que el texto se ajuste dentro del contenedor */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional semi-transparent background */
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  max-width: 200px; /* Adjust max width as necessary */
+  word-wrap: break-word; /* Allow text to fit inside the container */
+  margin: 0 auto; /* Center text within the content */
 }
+
 .btn {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background-color: #d14b5b; /* Color de fondo del botón */
-    color: white; /* Color del texto */
-    padding: 10px 20px; /* Espaciado interno del botón */
-    border: none; /* Quita el borde del botón */
-    cursor: pointer;
-    border-radius: 5px; /* Borde redondeado */
-    z-index: 1000; /* Z-index para asegurar que esté sobre otros elementos */
-    font-size: 16px; /* Tamaño de la fuente */
-    font-weight: bold; /* Texto en negrita */
-    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #d14b5b; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* Remove button border */
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  z-index: 1000; /* Ensure it stays above other elements */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
 .btn:hover {
-    background-color: #764762; /* Cambia el color de fondo al pasar el mouse */
+  background-color: #764762; /* Background color on hover */
 }
 
 .btn:active {
-    background-color: #764762; /* Cambia el color de fondo cuando se presiona el botón */
+  background-color: #764762; /* Background color when button is pressed */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+      width: 70%;
+  }
+
+  .Texto {
+      font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .top-right-text {
+      font-size: 14px; /* Adjust text size for smaller screens */
+  }
+
+  .btn {
+      font-size: 14px; /* Adjust button size for smaller screens */
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      width: 90%;
+  }
+
+  .Texto {
+      font-size: 18px; /* Further adjust font size for even smaller screens */
+  }
+
+  .top-right-text {
+      font-size: 12px; /* Further adjust text size for smaller screens */
+  }
+
+  .btn {
+      font-size: 12px; /* Further adjust button size for smaller screens */
+      padding: 6px 12px;
+  }
 }
